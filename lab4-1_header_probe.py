@@ -13,7 +13,7 @@ USER_AGENTS = [
 def probe(url, out_csv=None):
     rows = []
     for ua in USER_AGENTS:
-        headers = {"User-Agent": ua}
+        headers = {"User-Agent": ua, }
         try:
             r = requests.get(url, headers=headers, timeout=5)
             rows.append({
